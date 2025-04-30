@@ -210,7 +210,6 @@ class PersonnageJeu {
   etourdir(): void {
     console.log("Le personnage est étourdi !");
     this.definirEtat(new EtatEtourdi(this));
-    // Simuler la fin de l'étourdissement après quelques secondes
     setTimeout(() => {
       console.log("Le personnage n'est plus étourdi.");
       this.definirEtat(new EtatInactif(this));
@@ -219,7 +218,6 @@ class PersonnageJeu {
   }
 }
 
-// Utilisation
 const heros = new PersonnageJeu();
 heros.inactif();
 heros.attaquer();
@@ -227,5 +225,5 @@ heros.seDeplacer();
 heros.sauter();
 heros.attaquer();
 heros.etourdir();
-heros.attaquer(); // Tentative d'attaquer pendant l'étourdissement
-setTimeout(() => heros.seDeplacer(), 4000); // Tentative de se déplacer après l'étourdissement
+heros.attaquer();
+setTimeout(() => heros.seDeplacer(), 4000);
